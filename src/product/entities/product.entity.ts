@@ -9,8 +9,10 @@ import { Product_category } from './product_category.entity';
 // @Entity('User', { schema: 'dollshop' })에서 아래로 변경
 @Entity('Product')
 export class Product extends BaseEntity {
-  @PrimaryGeneratedColumn({ type: 'int', name: 'id' }) id: number;
-  @Column('int', { name: 'product_number' }) product_number: number;
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
+  id: number;
+  @Column('int', { name: 'product_number' })
+  product_number: number;
   @Column('varchar', { name: 'category_code', length: 30 })
   category_code: string;
 
@@ -24,7 +26,7 @@ export class Product extends BaseEntity {
   @Column('int', { name: 'product_hits' }) product_hits: number;
   cart: any;
   @ManyToOne(
-    (type) => Product_category,
+    () => Product_category,
     (Product_category) => Product_category.product,
   )
   product_category: Product_category;

@@ -9,12 +9,18 @@ import {
 @Entity()
 @Unique(['user_id'])
 export class User extends BaseEntity {
-  @PrimaryGeneratedColumn({ type: 'int', name: 'id' }) id: number;
-  @Column('varchar', { name: 'user_id', length: 30 }) user_id: string;
-  @Column('varchar', { name: 'user_pwd', length: 50 }) user_pwd: string;
-  @Column('varchar', { name: 'user_name', length: 20 }) user_name: string;
-  @Column('varchar', { name: 'user_phone', length: 20 }) user_phone: string;
-  @Column('varchar', { name: 'user_email', length: 50 }) user_email: string;
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
+  id: number;
+  @Column('varchar', { name: 'user_id', length: 30 })
+  user_id: string;
+  @Column('varchar', { name: 'user_pwd', length: 50 })
+  user_pwd: string;
+  @Column('varchar', { name: 'user_name', length: 20 })
+  user_name: string;
+  @Column('varchar', { name: 'user_phone', length: 20 })
+  user_phone: string;
+  @Column('varchar', { name: 'user_email', length: 50 })
+  user_email: string;
   @Column('varchar', { name: 'user_nickname', length: 20 })
   user_nickname: string;
   @Column('varchar', { name: 'user_profile', length: 100 })

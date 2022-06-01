@@ -3,7 +3,8 @@ import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 @Entity('Product_category')
 export class Product_category extends BaseEntity {
   [x: string]: any;
-  @PrimaryGeneratedColumn({ type: 'int', name: 'id' }) id: number;
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
+  id: number;
   @Column('varchar', { name: 'category_code', length: 30 })
   category_code: string;
   @Column('varchar', { name: 'category_name', length: 50 })

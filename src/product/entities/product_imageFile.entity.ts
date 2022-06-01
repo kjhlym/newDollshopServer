@@ -9,9 +9,12 @@ import {
 import { Product } from './product.entity';
 @Entity('Product_imageFile')
 export class Product_imageFile extends BaseEntity {
-  @PrimaryGeneratedColumn({ type: 'int', name: 'id' }) id: number;
-  @Column('int', { name: 'file_number' }) file_number: number;
-  @Column('int', { name: 'product_number' }) product_number: number;
+  @PrimaryGeneratedColumn({ type: 'int', name: 'id' })
+  id: number;
+  @Column('int', { name: 'file_number' })
+  file_number: number;
+  @Column('int', { name: 'product_number' })
+  product_number: number;
   @Column('varchar', { name: 'origin_file_name', length: 300 })
   origin_file_name: string;
   @Column('varchar', { name: 'stored_file_name', length: 300 })
@@ -28,6 +31,6 @@ export class Product_imageFile extends BaseEntity {
   user_role: number;
   @Column('varchar', { name: 'delete_check' })
   delete_check: string;
-  @ManyToOne((type) => Product, (product) => product.product_imageFile)
+  @ManyToOne(() => Product, (product) => product.product_imageFile)
   product: Product;
 }
